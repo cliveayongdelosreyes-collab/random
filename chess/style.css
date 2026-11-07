@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 480px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+button {
+  background: #334155;
+  color: #fff;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #475569;
+}
+
+/* 8x8 Grid Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 60px);
+  grid-template-rows: repeat(8, 60px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.light { background-color: #475569; }
+.dark { background-color: #1e293b; }
+
+/* Solid White Pieces */
+.piece-w {
+  color: #ffffff;
+  filter: none;
+  text-shadow: none;
+}
+
+/* Solid Black Pieces */
+.piece-b {
+  color: #000000;
+  filter: none;
+  text-shadow: none;
+}
+
+.selected {
+  background-color: #0284c7 !important;
+}
+
+.square:hover {
+  filter: brightness(1.2);
+}
